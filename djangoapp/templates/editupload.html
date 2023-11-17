@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <style>
+    body{
+            background-color: #FEE140;
+            background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
+            background-repeat:no-repeat;
+            background-size:100% 1200px;
+        }
+        #a{
+            width:400px;
+            margin-left:50px;
+            margin-top:20px;
+        }
+        .btn{
+            margin-left:50px;
+        }
+        #b{
+            margin-top:10px;
+            margin-left:500px;
+        }
+        #second{
+        margin-left:400px;
+        height:630px;
+        width:550px;
+        background-color:#333333;
+
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <title>File Upload</title>
+
+</head>
+<body>
+    <h1 id="b"><font color="black">FILE UPLOAD PAGE</font></h1>
+    <div id="second">
+    <form method="post" enctype="multipart/form-data">{% csrf_token %}
+        <br>
+        <div class="mb-3" id ="a">
+            <label class="form-label"><font color="white">Audio Name</font></label>
+            <input type="text" class="form-control" name="audio_name" value="{{data.audio_name}}">
+          </div>
+          <div class="mb-3" id="a">
+            <label for="formFile" class="form-label"><font color="white">Audio</font></label>
+            <input class="form-control" name="audio" type="file" value="{{data.audio}}">
+          </div>
+      <div class="mb-3" id ="a">
+            <label class="form-label"><font color="white">Video Name</font></label>
+            <input type="text" class="form-control" name="video_name" value="{{data.video_name}}">
+          </div>
+          <div class="mb-3" id="a">
+            <label for="formFile" class="form-label"><font color="white">Video</font></label>
+            <input class="form-control" name="video" type="file" value="{{data.video}}">
+          </div>
+      <div class="mb-3" id ="a">
+            <label class="form-label"><font color="white">Pdf Name</font></label>
+            <input type="text" class="form-control" name="pdf_name" value="{{data.pdf_name}}">
+          </div>
+          <div class="mb-3" id="a">
+            <label for="formFile" class="form-label"><font color="white">Pdf</font></label>
+            <input class="form-control" name="pdf" type="file" id="formFile" value="{{data.pdf}}">
+          </div>
+
+
+
+        <button type="submit" class="btn btn-success">UPDATE</button>
+    </div>
+
+    </form>
+
+</body>
+</html>

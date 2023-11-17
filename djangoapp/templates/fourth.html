@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center><h1><font color="red"><u>Django</u></font></h1><br>
+    <img src="{% static 'django.jpg' %}" height="200px" width="200px">
+</center>
+  <p>Django is a back-end server side web framework.
+
+Django is free, open source and written in Python.
+
+Django makes it easier to build web pages using Python.
+      Django was invented by Lawrence Journal-World in 2003, to meet the short deadlines in the newspaper and at the same time meeting the demands of experienced web developers.
+
+Initial release to the public was in July 2005.
+
+Latest version of Django is 4.0.3 (March 2022).
+  </p>
+    <p>How does Django Work?<br><br>
+Django follows the MVT design pattern (Model View Template).
+
+Model - The data you want to present, usually data from a database.
+View - A request handler that returns the relevant template and content - based on the request from the user.
+Template - A text file (like an HTML file) containing the layout of the web page, with logic on how to display the data.</p>
+
+<!--audio-->
+<audio controls>
+    <source src="{% static 'audio.mp3' %}" type="audio/mpeg">
+</audio>
+<br>
+<!--videos-->
+<video width="300px" height="300px" controls>
+    <source src="{% static 'video.mp4' %}">
+</video>
+<!--pdf download-->
+<a href="{% static 'django_work.pdf' %}" download>download</a>
+</body>
+</html>

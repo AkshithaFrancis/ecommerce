@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <style>
+        #maindiv{
+            height:800px;
+            width:100%;
+            background-color: #F4D03F;
+            background-image: linear-gradient(132deg, #F4D03F 0%, #16A085 100%);
+<!--            background-image: url("log4.jpg");-->
+            background-repeat:no-repeat;
+            background-size:100% 950px;
+
+        }
+        #first{
+            height:550px;
+            width:450px;
+            margin-left:300px;
+            margin-top:100px;
+            background-color: white;
+            float:left;
+            padding:20px;
+            box-shadow: 10px 10px 25px white;
+
+        }
+        #f1,#f2{
+            font-size:20px;
+        }
+
+        #btn1{
+
+            height:40px;
+            width:200px;
+            font-size:20px;
+            color:white;
+
+            border:none;
+        }
+        #second{
+            height:550px;
+            width:450px;
+            margin-right:100px;
+            margin-top:100px;
+            background-color: #85FFBD;
+            background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+            background-repeat:no-repeat;
+            background-size:450px 550px;
+            float:left;
+            padding:20px;
+            color:white;
+<!--            box-shadow: 10px 10px 15px white;-->
+        }
+        #headings{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size:larger;
+
+        }
+        #heads{
+        margin-top:200px;
+        }
+
+    </style>
+    <script src="https://kit.fontawesome.com/0f179b9dc9.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/0f179b9dc9.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">{% csrf_token %}
+    <div id="maindiv">
+        <div id="secdiv">
+            <div id="first">
+                <center><h1 id="headings"><font color="#006666"><b>Sign In</b></font></h1><br>
+                    <i class="fa-brands fa-facebook" style="color: #055df5;" id="f1"></i>&nbsp;&nbsp;
+                    <i class="fa-brands fa-twitter" style="color: #0d5de7;" id="f2"></i><br>
+                <p><b>or use your account</b></p></center><br>
+                <input class="form-control" type="text" name="email" placeholder="Email" aria-label="default input example"><br><br>
+                <input class="form-control" type="password" name="password" placeholder="Password" aria-label="default input example"><br><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Remember me
+                    </label>
+                    <a href="#!" style="float:right">Forgot password?</a>
+                  </div>
+                  <br>
+                  <div align="center">
+                    <button type="submit" class="btn btn-primary btn-block" id="btn1">Login</button>
+                    <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="registration.html"
+                            class="link-danger">Register</a></p>
+                </div>
+
+            </div>
+            <div id="second">
+               <!-- <img src="log1.jpg" height="350px" width="400px"> -->
+              <center><font color="orange"><h1 id="heads">LOGIN PAGE</h1></font></center>
+            </div>
+        </div>
+        </div>
+    </form>
+</body>
+</html>
